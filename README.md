@@ -2,4 +2,7 @@
 
 <p> 
   <a href="https://space.bilibili.com/2503390">bilibili</a>
+  <a href="https://www.52pojie.cn/home.php?mod=space&uid=1718804&do=thread&view=me&from=space">吾爱破解</a>
+  <a href="https://stackoverflow.com/users/15413886/guardian">StackOverflow</a>
+  <a href="https://leetcode.cn/u/guardian-6/">LeetCode</a>
 </p> 
