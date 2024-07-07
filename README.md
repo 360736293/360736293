@@ -1,3 +1,6 @@
+<div style="wifth:100%;overflow:hidden;">
+  <div style="float: left;width: 50%;padding: 10px;">
+    
 **Statistics**
 <p><img align="center" width="400" src="https://github-readme-stats.vercel.app/api?username=360736293&theme=transparent&include_all_commits=true&show_icons=true&hide_border=false" /></p>
 <p><img align="center" width="300" src="https://github-readme-stats.vercel.app/api/top-langs/?username=360736293&theme=transparent&include_all_commits=true&show_icons=true&hide_border=false" /></p>
@@ -12,3 +15,11 @@
 
 **Contact**
 <p><a href="mailto:648941183@qq.com"><img alt="Email" src="https://img.shields.io/badge/Email-360736293@qq.com-blue?style=flat-square&logo=gmail"></a></p>
+  </div>
+  <div style="float: right;width: 40%;padding: 10px;height:570px;">
+    <img src="https://raw.githubusercontent.com/360736293/ImageHosting/main/emilia.png"/>
+  </div>
+</div>
+
+
+
