@@ -12,6 +12,3 @@
 
 **Contact**
 <p><a href="mailto:648941183@qq.com"><img alt="Email" src="https://img.shields.io/badge/Email-360736293@qq.com-blue?style=flat-square&logo=gmail"></a></p>
-
-**Visit**
-<p><img src="https://profile-counter.glitch.me/360736293/count.svg" /></p>
