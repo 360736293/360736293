@@ -13,7 +13,7 @@
   <a href="https://www.52pojie.cn/home.php?mod=space&uid=1718804&do=thread&view=me&from=space"><img src="https://img.shields.io/badge/%E5%90%BE%E7%88%B1%E7%A0%B4%E8%A7%A3-E31111?style=flat&logoColor=white" height="25px" alt="吾爱破解"></a>
   <a href="https://stackoverflow.com/users/15413886/guardian"><img src="https://img.shields.io/badge/Stack Overflow-F48024?style=flat&logo=Stack Overflow&logoColor=white" height="25px" alt="Stack Overflow"></a>
   <a href="https://leetcode.cn/u/guardian-6/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=flat&logo=LeetCode&logoColor=white" height="25px" alt="LeetCode"></a>
-  <a href="https://steamcommunity.com/profiles/76561198144416767/"><img alt="Static Badge" src="https://img.shields.io/badge/Steam-black?style=flat&logo=steam&logoColor=white"></a>
+  <a href="https://steamcommunity.com/profiles/76561198144416767/"><img alt="Static Badge" height="25px" src="https://img.shields.io/badge/Steam-0d1117?style=flat&logo=steam&logoColor=white"></a>
 
 </p> 
 
