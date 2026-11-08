@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="135" viewBox="0 0 420 135" role="img" aria-labelledby="title description">
+  <title id="title">GitHub Statistics: awaiting first update</title>
+  <desc id="description">No statistics have been generated yet. Run the Update profile cards GitHub Actions workflow.</desc>
+  <rect x="0.5" y="0.5" width="419" height="134" rx="8" fill="none" stroke="#30363d"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="22" y="34" font-size="18" font-weight="600" fill="#58a6ff">GitHub Statistics</text>
+    <text x="22" y="70" font-size="13" fill="#c9d1d9">Awaiting the first successful update.</text>
+    <text x="22" y="98" font-size="12" fill="#c9d1d9">GitHub Actions → Update profile cards → Run workflow</text>
+  </g>
+</svg>

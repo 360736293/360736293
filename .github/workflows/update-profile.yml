@@ -1,0 +1,80 @@
+name: Update profile cards
+
+on:
+  schedule:
+    # 03:00 UTC = 11:00 Asia/Shanghai; scheduled runs may be delayed by GitHub.
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - .github/workflows/update-profile.yml
+
+concurrency:
+  group: update-profile-cards
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out the default branch
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Generate light statistics
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2
+        with:
+          card: stats
+          options: username=360736293&theme=default&bg_color=00000000&show_icons=true&include_all_commits=true&hide_border=false&card_width=420
+          path: profile/stats-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: "true"
+
+      - name: Generate dark statistics
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2
+        with:
+          card: stats
+          options: username=360736293&theme=github_dark&bg_color=00000000&show_icons=true&include_all_commits=true&hide_border=false&card_width=420
+          path: profile/stats-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: "true"
+
+      - name: Generate light languages
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2
+        with:
+          card: top-langs
+          options: username=360736293&theme=default&bg_color=00000000&layout=compact&langs_count=8&hide_border=false&card_width=420
+          path: profile/top-langs-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: "true"
+
+      - name: Generate dark languages
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2
+        with:
+          card: top-langs
+          options: username=360736293&theme=github_dark&bg_color=00000000&layout=compact&langs_count=8&hide_border=false&card_width=420
+          path: profile/top-langs-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: "true"
+
+      - name: Commit successful cards
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add profile/stats-light.svg profile/stats-dark.svg profile/top-langs-light.svg profile/top-langs-dark.svg
+          if git diff --cached --quiet; then
+            echo "Cards are unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: update profile cards"
+          git pull --rebase origin "${{ github.event.repository.default_branch }}"
+          git push origin "HEAD:${{ github.event.repository.default_branch }}"
